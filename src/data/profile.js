@@ -1,7 +1,7 @@
 const profile = {
-  nama: "Fajar Rizqi",
-  nim: "G6401231010",
-  kelompok: "01",
+  nama: "Naufal Abdullah Kafa Bihi",
+  nim: "21120122120032",
+  kelompok: "40",
 };
 
 export default profile;

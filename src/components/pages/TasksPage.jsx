@@ -16,8 +16,8 @@ const TasksPage = () => {
   };
 
   return (
-    <div className="p-6 md:p-10 min-h-screen bg-gray-50 pb-20 md:pb-8">
-      <div className="max-w-4xl mx-auto">
+    <div className="p-6 md:p-10 min-h-screen bg-gray-50 w-full pb-20 md:pb-8">
+      <div className="w-full">
         <h1 className="text-3xl font-bold text-gray-800 mb-6 flex items-center border-b pb-2">
           <ClipboardCheck className="w-7 h-7 mr-3 text-green-600" />
           Daftar Tugas

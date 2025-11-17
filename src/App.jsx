@@ -7,15 +7,15 @@ import MobileNavbar from "./components/navbar/MobileNavbar";
 import PWABadge from "./PWABadge";
 
 export default function App() {
-  const [currentPage, setCurrentPage] = useState('schedule');
+  const [currentPage, setCurrentPage] = useState("schedule");
 
   const renderCurrentPage = () => {
     switch (currentPage) {
-      case 'schedule':
+      case "schedule":
         return <SchedulePage />;
-      case 'tasks':
+      case "tasks":
         return <TasksPage />;
-      case 'profile':
+      case "profile":
         return <ProfilePage />;
       default:
         return <SchedulePage />;
@@ -23,15 +23,20 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 antialiased">
+    <div className="min-h-screen bg-gray-50 antialiased flex flex-col">
+      {/* NAVBAR TOP */}
       <DesktopNavbar currentPage={currentPage} onNavigate={setCurrentPage} />
-      
-      <main className="min-h-[calc(100vh-64px)] md:min-h-screen pt-0 md:pt-0">
-        {renderCurrentPage()}
+
+      {/* MAIN CONTENT */}
+      <main className="flex-1 w-full px-4 sm:px-6 md:px-10 lg:px-16 xl:px-24 py-6">
+        <div className="max-w-5xl mx-auto">
+          {renderCurrentPage()}
+        </div>
       </main>
-      
+
+      {/* MOBILE NAV */}
       <MobileNavbar currentPage={currentPage} onNavigate={setCurrentPage} />
-      
+
       <PWABadge />
     </div>
   );
